@@ -1,0 +1,221 @@
+/*
+color palette:
+darker => lighter  #bf8bff - #cca3ff - #dabcff - #e5d0ff #ffffff
+special dark: #793698
+*/
+
+body{
+    /*padding-top: 73.77px;*/
+    --nav-load-time: 300ms;
+    --explore-load-time: 600ms;
+    --jumbo-load-time: 800ms
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav-link:hover{
+    background-color: rgb(228, 210, 235);
+}
+
+a{
+    cursor: pointer;
+}
+
+.jumboTile{
+    background-image: url("./res/business.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#title{
+    width: 100%;
+    height: min-content;
+    text-align: center;
+    background-color: #9747ff60;
+    background-position: center;
+    color: #fff;
+    padding: 0 8rem;
+}
+
+#savoirPlus{
+    text-align: center;
+    color: rgba(166, 58, 209, 0.788);
+    font-size: 3rem;
+}
+
+.card{
+    margin: 2rem 0.5rem;
+}
+
+#about{
+    background-color: rgba(205, 114, 241, 0.788);
+    color: #fff;
+    font-size: 1.2rem;
+    border-top: #793698 solid 2px;
+    border-bottom: #793698 solid 2px;
+}
+
+.title-color{
+    color: #793698;
+}
+
+.header-style{
+    background-color: #fff;
+    color: #793698;
+    border-bottom: #793698 solid 2px;
+}
+/*##########_ my custom button styles_##############*/
+.btnCustomColorThemed{
+    text-align: center;
+    font-weight: 400;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    background-color: #793698;
+    color: #fff;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+}
+
+.btnCustomColorThemed-outline{
+    text-align: center;
+    font-weight: 400;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    color: #793698;
+    border-radius: 0.3rem;
+    border-color: #793698;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+}
+.btnCustomColorThemed-outline:hover{
+    background-color: #793698;
+    color: #fff;
+}
+
+.btnCustomColorThemed:hover{
+    background-color: #622c7a;
+}
+/*###################################################*/
+
+.contact-style{
+    background-color: rgb(236, 235, 236);
+    padding: 0 3rem 3rem 3rem;
+}
+
+footer{
+    padding: 4rem 6rem;
+    background-color: rgba(205, 114, 241, 0.788);
+    color: #fff;
+    font-size: 1.2rem;
+    border-top: #793698 solid 2px;
+}
+
+/*################_the services pages(r&d, conception, eco, industrial) styles_###################*/
+.media-object {
+    align-items: center;
+    padding: 4rem 1rem;
+}
+.media-object-bg-color-style-1{
+    background-color: rgba(223, 223, 223);
+    color: #442752;
+    font-size: 1.2rem;
+}
+.media-object-bg-color-style-2{
+    background-color: rgba(205, 114, 241, 0.788);
+    color: #fff;
+    font-size: 1.2rem;
+    border-top: #793698 solid 2px;
+    border-bottom: #793698 solid 2px;
+}
+.rendez-vous{
+    padding: 1.5rem;
+    color: #442752;
+}
+
+.sous-header{
+    padding: 3rem;
+    background-color: rgba(223, 223, 223);
+    color: #442752;
+    font-size: 1.2rem;
+}
+/*_______________Animations_______________*/ 
+.navbar{
+    animation: nav-anim var(--nav-load-time) ease-in;
+}
+
+@keyframes nav-anim {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+#title{
+    animation-name: jumbo-anim;
+    animation-duration: var(--jumbo-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time);
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+@keyframes jumbo-anim{
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(1.1)
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+#savoirPlus{
+    animation-name: exploreMainAnim;
+    animation-duration: var(--jumbo-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: calc(var(--nav-load-time) + var(--jumbo-load-time));
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+@keyframes exploreMainAnim{ 
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+/**############## media queries ############**/
+@media (max-width: 992px) {    
+    #write-to-us{
+        border-bottom: #793698 solid 2px;
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media(max-width:768px){
+    #title{
+        padding: 0rem 1rem;
+    }
+
+    .fit-card-image-mobile{
+        padding-top: 1rem;
+    }
+}

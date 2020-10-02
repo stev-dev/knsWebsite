@@ -1,0 +1,41 @@
+		     /
+1 missing favicon  \/
+							  /
+2 the website is not responsive this is a major problem \/
+
+3 the logo (i may add a simple animation) 
+	       /
+(2,3) NAvbar \/ i animated the whole navbar
+				    /
+the jumbotron is not looking good \/
+							       /
+the middle section(services) needs a mojor upgrade (_ - _ -) \/
+							/
+about us section: reduce text, bigger and better font \/
+
+-----add a dedicated metrics section, right below "about us"---- i abandoned this feature
+				    /
+reorganize the contact us section \/
+			 /
+add a beautiful footer.\/
+
+take a look at the services drop down and see what i can do. --work in progress--
+
+##########################Stuff to optimize####################################
+								       /
+* outline button of the custom style i created (style the headlines).\/
+* full width form in the contact section area.\/
+				     /
+* responsive background jumbotrone.\/
+	  /
+* footer\/	    
+
+#################################refine########################################
+*padding of the title in the jumbotron on mobile.
+*padding-top of the image in the card (services section), also make all the images the same size
+to avoid different card sizes on mobile.
+
+new feature:
+media query controle with js, to make the navbar sticky on mobile.
+
+
